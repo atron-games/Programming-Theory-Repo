@@ -10,13 +10,13 @@ public class Animal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartSequence();
+        StartSequence(); //ABSTRACTION
     }
 
     // Update is called once per frame
     void Update()
     {
-        PassInputs();
+        PassInputs(); //ABSTRACTION
     }
 
     public void StartSequence()
@@ -30,8 +30,8 @@ public class Animal : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
-        Move(verticalInput, horizontalInput);
-        SetAnimation(verticalInput);
+        Move(verticalInput, horizontalInput); //ABSTRACTION
+        SetAnimation(verticalInput);          //ABSTRACTION
 
         if (Input.GetKeyDown(KeyCode.Space))
         { Jump(); }
